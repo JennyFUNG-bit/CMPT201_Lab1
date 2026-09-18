@@ -10,11 +10,11 @@ int main() {
   char *word = "";
   if (read != -1) {
 
-    for (int i = 0; i < sentence.len; i++) {
-      if (sentence[i] == " ") {
+    for (int i = 0; i < strlen(sentence); i++) {
+      if (sentence[i] == ' ') {
         printf("%s \n", word);
         word = "";
-      } else if (i = sentence.len - 1) {
+      } else if (i == strlen(sentence) - 1) {
         printf("%s \n", word);
         word = "";
       } else {
@@ -22,7 +22,7 @@ int main() {
         continue;
       }
     }
-    printf("You entered: %c", sentence[0]);
+    printf("You entered: %s", sentence);
   } else {
     printf("Error reading input\n");
   }
