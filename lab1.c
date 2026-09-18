@@ -10,11 +10,11 @@ int main() {
   char *word = "";
   if (read != -1) {
 
-    for (size_t i = 0; i < strlen(sentence); i++) {
+    for (size_t i = 0; i < len; i++) {
       if (sentence[i] == ' ') {
         printf("%s \n", word);
         word = "";
-      } else if (i == strlen(sentence) - 1) {
+      } else if (i == len - 1) {
         printf("%s \n", word);
         word = "";
       } else {
